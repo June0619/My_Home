@@ -1,0 +1,10 @@
+.container { width: 800px;}
+.form-horizontal { width: 500px; margin:0 auto;}
+#main_container {display: flex; margin: 0 auto;}
+.title {width:60%; position: relative; left:0px;}
+.index{font-size: 55px; font-family:'Anton', sans-serif; color:grey;}
+#box .menu{ position:absolute; right:0px; bottom:0px; 
+			text-align: right; display: inline; width:40%; }
+#box a{ text-decoration: none; color: black;}
+#box { height: 60px; }
+footer { font-family: 'Patua One', cursive; font-size: 30px; }
