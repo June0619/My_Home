@@ -3,9 +3,9 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/layout/Header.jsp"%>
 <div id="box_s2">
-	<form action="/My_Home/modify/modifyInfo.jsp?id=<%=session.getValue("login") %>" method="post">
+	<form action="/My_Home/modify/modifyInfo.jsp?id=${sessionScope.login }	" method="post">
 		<h3>정보 수정</h3>
-		ID : <%=session.getValue("login") %>
+		ID : ${sessionScope.login }
 		<div class="form-group">
 			<label for="pwd1">Password</label> <input type="password"
 				class="form-control" id="pwd1" onchange="pwdChk1()" name="pwd"

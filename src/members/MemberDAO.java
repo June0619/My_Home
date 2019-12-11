@@ -38,6 +38,7 @@ public class MemberDAO {
 				dto.setAddr(rs.getString("addr"));
 				dto.setTel(rs.getString("tel"));
 			}
+			else return null;
 		} catch(Exception e) { e.printStackTrace(); }
 		
 		return dto;

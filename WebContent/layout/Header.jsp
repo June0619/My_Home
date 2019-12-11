@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,6 @@
 <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Anton|Jua&display=swap" rel="stylesheet">
 <style  type="text/css"></style>
-
 <title>Build Something</title>
 </head>
 <body>
@@ -22,16 +23,19 @@
 	<div id="box" class="page-header" style="display:flex; position:relative;">
 		<div class="title"><a class="index" href="/My_Home/Main.jsp">Build Something</a></div>
 		<div class="menu">
-		<%if(session.getAttribute("login")==null){ %>
+	<c:choose>
+		<c:when test="${sessionScope.login == null }">
 		<a href="/My_Home/login/Login.jsp">Login</a> |
 		<a href="/My_Home/signin/SignInForm.jsp">Sign In</a>
-		<%}else{ %>
+		</c:when>
+		<c:otherwise>
 		<a href="/My_Home/login/Logout.jsp">Logout</a> |
 		<a href="/My_Home/members/showInfo.jsp">My Page</a>
-			<%if(session.getValue("login").equals("admin")){ %>
+			<c:if test="${login=='admin'}">
 			| <a href="/My_Home/members/members.jsp">회원목록</a>
-		<%	}
-		} %>
+			</c:if>
+		</c:otherwise>
+	</c:choose>
 		</div>
 	</div>
 	<hr>

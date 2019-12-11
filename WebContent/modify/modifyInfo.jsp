@@ -2,19 +2,21 @@
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<jsp:useBean id="mb" class="members.MemberDTO"></jsp:useBean>
-	<jsp:setProperty property="*" name="mb"/>
-	<%
-	MemberDAO dao = new MemberDAO(); 
-	if(dao.modifyMember(mb)!=0){
-	session.setAttribute("login", mb.getId());%>
-	<script>
-		alert('수정 완료');
-		location.href="/My_Home/members/showInfo.jsp";
-	</script>
-	<%} else{ %>
-	<script>
-		alert('수정 실패');
-		location.href="/My_Home/Main.jsp";
-	</script>
-	<%} %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<jsp:useBean id="mb" class="members.MemberDTO"></jsp:useBean>
+<jsp:useBean id="dao" class="members.MemberDAO"></jsp:useBean>
+<jsp:setProperty property="*" name="mb"/>
+<c:choose>
+	<c:when test="${dao.modifyMember(mb)!=0}">
+		<script>
+			alert('수정 완료');
+			location.href="/My_Home/members/showInfo.jsp";
+		</script>	
+	</c:when>
+	<c:otherwise>
+		<script>
+			alert('수정 실패');
+			location.href="/My_Home/Main.jsp";
+		</script>
+	</c:otherwise>
+</c:choose>
