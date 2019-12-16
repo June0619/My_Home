@@ -8,6 +8,9 @@
 	<c:choose>
 		<c:when test="${dao.deleteMember() ==1}">
 			<c:remove var="login" scope="session"/>
+			<c:remove var="name__" scope="session"/>
+			<c:remove var="addr__" scope="session"/>
+			<c:remove var="tel__" scope="session"/>
 			<script>
 					alert('탈퇴 되었습니다.');
 					location.href="/My_Home/Main.jsp";

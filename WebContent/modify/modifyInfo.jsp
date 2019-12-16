@@ -15,6 +15,9 @@
 	<c:if test="${mb.tel == null }">
 		${mb.tel = sessionScope.tel_ }
 	</c:if>
+	<c:remove var="name__" scope="session"/>
+	<c:remove var="addr__" scope="session"/>
+	<c:remove var="tel__" scope="session"/>
 <c:choose>
 	<c:when test="${dao.modifyMember(mb)!=0}">
 		<script>
