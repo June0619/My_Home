@@ -1,0 +1,17 @@
+create table members(
+id varchar2(20) not null,
+pwd varchar2(20) not null,
+name varchar2(20) not null,
+addr varchar2(20),
+tel varchar2(20),
+primary key(id)
+);
+
+create table board(
+
+no number not null,
+count varchar2,
+title varchar2(20) not null,
+pwd varchar2(20) not null,
+content varchar2(20),
+);

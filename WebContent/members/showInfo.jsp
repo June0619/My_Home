@@ -15,7 +15,7 @@ function del(){
 	<table class="table" style="width:350px; margin: 0 auto">
 		<tr><th colspan="2" style="text-align:center">회원 정보</th></tr>
 		<tr><td>ID</td><td>${dto.getId()}</td></tr>
-		<tr><td>Paaword</td><td>${dto.getPwd()}</td></tr>
+		<tr><td>Password</td><td>${dto.getPwd()}</td></tr>
 		<tr><td>Name</td><td>${dto.getName()}</td></tr>
 		<tr><td>Address</td><td>${dto.getAddr()}</td></tr>
 		<tr><td>Tel</td><td>${dto.getTel()}</td></tr>
