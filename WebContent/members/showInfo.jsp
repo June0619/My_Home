@@ -19,6 +19,9 @@ function del(){
 		<tr><td>Name</td><td>${dto.getName()}</td></tr>
 		<tr><td>Address</td><td>${dto.getAddr()}</td></tr>
 		<tr><td>Tel</td><td>${dto.getTel()}</td></tr>
+		<c:set var="name_" value="${dto.name }" scope="session"/>
+		<c:set var="addr_" value="${dto.addr }" scope="session"/>
+		<c:set var="tel_" value="${dto.tel }" scope="session"/>
 		<tr><td><button onclick="location.href='/My_Home/modify/modifyForm.jsp'" class="btn btn-info btn-sm">수정</button></td>
 		<td><button onclick="del()" class="btn btn-danger btn-sm">탈퇴</button></td></tr>
 	</table>

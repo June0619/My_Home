@@ -6,6 +6,15 @@
 <jsp:useBean id="mb" class="members.MemberDTO"></jsp:useBean>
 <jsp:useBean id="dao" class="members.MemberDAO"></jsp:useBean>
 <jsp:setProperty property="*" name="mb"/>
+	<c:if test="${mb.name == null }">
+		${mb.name = sessionScope.name_ }
+	</c:if>
+	<c:if test="${mb.addr == null }">
+		${mb.addr = sessionScope.addr_ }
+	</c:if>
+	<c:if test="${mb.tel == null }">
+		${mb.tel = sessionScope.tel_ }
+	</c:if>
 <c:choose>
 	<c:when test="${dao.modifyMember(mb)!=0}">
 		<script>
