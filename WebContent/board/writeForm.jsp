@@ -15,8 +15,8 @@
    		<label for="write_content">Content</label>
     	<textarea style="resize: none;" class="form-control" id="write_content" name="content" placeholder="Content" rows="5"></textarea>
   		</div>
-		<button type="submit" class="btn btn-default">제출</button>
+  		<button type="button" class="btn btn-outline-danger" onclick="location.href='/My_Home/board/boardList.jsp'">Cancel</button>
+		<button type="submit" class="btn btn-outline-primary">Write</button>
 	</form>
 	</div>
-	
 <%@include file="/layout/Footer.jsp" %>

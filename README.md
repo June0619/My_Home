@@ -1,5 +1,5 @@
 # My_Home
- 
+
 * 2019-12-13
 	- EL / JSTL 적용
 * 2019-12-16
@@ -7,11 +7,15 @@
 	modifyInfo.jsp 에서 해당 변수가 공백일 시 세션값을 불러와 사용하게 수정.<br>
 	// ShowInfo 페이지에서 수정하지 않고
 	다른 페이지로 이동할 경우 세션이 사용되지 않고 유지되는 문제가 있음.
-	
-	
+* 2019-12-17
+	 - Board 구현(Create / Read / Delete)
+   - HomeServer 구동
+
 ## 개선 필요사항
-1. modifyInfo 
+1. modifyInfo
  - ID 표현 디자인 개선
 2. Main
  - 로그인 성공 메세지 디자인 개선
-3. Board 구현
+3. Board
+ - update 구현
+ - delete modal 디자인 개선

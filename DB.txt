@@ -10,6 +10,7 @@ primary key(id)
 create table board(
 no number not null,
 title varchar2(100) not null,
+author varchar2(50) not null,
 count number not null,
 savedate date default sysdate,
 pwd varchar2(20) not null,
