@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<fmt:requestEncoding value="utf-8"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +33,7 @@
 		<c:otherwise>
 		<a href="/My_Home/login/Logout.jsp">Logout</a> |
 		<a href="/My_Home/members/showInfo.jsp">My Page</a> | 
-		<a href="/My_Home/Board/boardList.jsp">Board</a>
+		<a href="/My_Home/board/boardList.jsp">Board</a>
 			<c:if test="${login=='admin'}">
 			| <a href="/My_Home/members/members.jsp">회원목록</a>
 			</c:if>

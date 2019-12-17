@@ -8,10 +8,28 @@ primary key(id)
 );
 
 create table board(
-
 no number not null,
-count varchar2,
-title varchar2(20) not null,
+title varchar2(100) not null,
+count number not null,
+savedate date default sysdate,
 pwd varchar2(20) not null,
-content varchar2(20),
+content varchar2(300)
 );
+
+create sequence board_seq;
+
+=========================================
+
+create table test_board(
+id number(4) primary key,
+name varchar2(20),
+title varchar2(100),
+content varchar2(300),
+savedate date default sysdate,
+hit number(4) default 0,
+idgroup number(4),
+step number(4),
+indent number(4)
+);
+create sequence test_board_seq;              
+

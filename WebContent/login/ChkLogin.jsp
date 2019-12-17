@@ -10,6 +10,7 @@
 <c:if test="${dto != null}">
 	<c:if test="${dto.getPwd() == pwd }">
 		<c:set var="login" value="${id}" scope="session"/>
+		<c:set var="user" value="${dto.name}" scope="session"/>
 		<script>
 			alert('${id}님 로그인 되었습니다!');
 			location.href="/My_Home/Main.jsp";
