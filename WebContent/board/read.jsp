@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file="/layout/Header.jsp" %>
 <table class="table table-bordered">
-<jsp:useBean id="dao" class="board.BoardDAO"></jsp:useBean>
+<jsp:useBean id="dao" class="board.BoardDAO"/>
 <c:set var="dto" value="${dao.read(param.no) }"/>
 	<tr><td>Title</td><td>${dto.title }</td></tr>
 	<tr><td>author</td><td>${dto.author }</td></tr>
@@ -17,6 +17,7 @@
 	</tr>
 </table>
 <button type="button" class="btn btn-outline-info" onclick="location.href='/My_Home/board/boardList.jsp'">List</button>
+<button type="button" class="btn btn-outline-warning" onclick="location.href='/My_Home/board/modifyForm.jsp?no=${param.no}'">Modify</button>
 <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target=".bs-example-modal-sm">Delete</button>
 <div class="modal fade bs-example-modal-sm" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">

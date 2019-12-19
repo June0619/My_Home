@@ -137,4 +137,22 @@ public class BoardDAO
 		}
 		return chk;
 	}
+	
+	public void modify(String no, String title, String content)
+	{
+		String sql = "update board set title=?, content=? where no=?";
+		try
+		{
+			con = DriverManager.getConnection(url, user, pwd);
+			ps = con.prepareStatement(sql);
+			ps.setString(1, title);
+			ps.setString(2, content);
+			ps.setString(3, no);
+			ps.executeUpdate();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 }
