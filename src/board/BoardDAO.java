@@ -27,7 +27,7 @@ public class BoardDAO
 	
 	public ArrayList<BoardDTO> list()
 	{
-		String sql = "select * from board";
+		String sql = "select * from board order by no desc";
 		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
 		try
 		{
