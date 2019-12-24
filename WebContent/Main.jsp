@@ -6,4 +6,8 @@
 	<img src="/My_Home/sources/img1.jpg" class="img-thumbnail" alt="Responsive image">
 	</div>
 </div>
+
+<script>
+
+</script>
 <%@ include file = "/layout/Footer.jsp" %>
